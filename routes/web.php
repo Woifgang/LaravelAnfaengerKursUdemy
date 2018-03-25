@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/servus.habedere', function () {
+    return "servus und habedere";
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
