@@ -15,9 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/servus.habedere', function () {
-    return "servus und habedere";
+Route::get('/impressum', function () {
+    return view('impressum');
 });
+
+Route::get('/formular' , function (){
+    return view('formular');
+});
+
+Route::post('/data' , 'FormularController@formularAuswerten');
 
 Auth::routes();
 
