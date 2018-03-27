@@ -1,4 +1,4 @@
-@include('misc.header')
+@include('tmp.misc.header')
 
     <h1>{{  $eingabe or 'Eingabe' }}</h1>
     <h1>{{  $standartWert or 'Standartwert' }}</h1>
@@ -23,4 +23,4 @@
     </ul>
     <a href="impressum">impressum</a>
 
-@include('misc.footer')
+@include('tmp.misc.footer')

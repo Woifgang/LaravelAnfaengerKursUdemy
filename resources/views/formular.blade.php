@@ -1,21 +1,26 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.layout')
 
-    <title>Formular</title>
+@section('title' , 'Formular Validator')
 
-</head>
+@section('content')
 
-<body>
-<h1>Formular</h1>
+    @if(count($errors) > 0)
+        <ul>
+            @foreach($errors->all() as $err)
+                <li>{{  $err  }}</li>
+            @endforeach
+        </ul>
+    @endif
 
-<form method="post" action="/data">
-    {{csrf_field()}} <!-- wird benötigt zwegs Sicherheit -->
-    <input type="text" name="eingabe">
-    <input type="submit" value="Los..!">
+    <form method="POST" action="/validate">
+        {{  csrf_field()  }}
+        Username:
+        <input type="text" name="username">
+        <br>
+        E-mail:
+        <input type="email" name="email">
+        <br>
+        <input type="submit" value="Los...!">
+    </form>
 
-</form>
-</body>
+@endsection

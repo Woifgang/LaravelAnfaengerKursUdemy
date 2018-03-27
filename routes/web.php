@@ -12,15 +12,29 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/tmp/welcome');
 });
 
+
+//Formular Validator
+
+Route::get('/formular', function (){
+    return view('formular');
+});
+
+Route::post('/validate', 'ValidateController@inputValidate');
+
+
+
+/*
+//Grundfunktionen
+
 Route::get('/impressum', function () {
-    return view('impressum');
+    return view('/tmp/impressum');
 });
 
 Route::get('/formular' , function (){
-    return view('formular');
+    return view('/tmp/formular');
 });
 
 Route::post('/data' , 'FormularController@formularAuswerten');
@@ -29,3 +43,4 @@ Route::get('/data', 'DataAusgabeController@standartwert' );
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+*/
