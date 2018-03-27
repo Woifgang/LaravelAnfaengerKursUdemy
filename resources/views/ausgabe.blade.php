@@ -21,5 +21,6 @@
             <li>{{  $item['Name']  }}</li>
         @endforeach
     </ul>
+    <a href="impressum">impressum</a>
 
 @include('misc.footer')
