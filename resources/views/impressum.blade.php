@@ -1,17 +1,13 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('vorlage')
 
-    <title>Impressum</title>
+@section('title', 'Ich bin das Impressum')
 
-</head>
+@section('content')
+    <div class="swag">
+        <h1>impressum</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+    </div>
 
-<body>
-<h1>Impressum</h1>
-
-<p>Ich bin im Impressum</p>
-</body>
-</html>
+@endsection

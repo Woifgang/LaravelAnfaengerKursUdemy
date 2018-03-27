@@ -1,16 +1,25 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@include('misc.header')
 
-    <title>Formular Ausgabe</title>
+    <h1>{{  $eingabe or 'Eingabe' }}</h1>
+    <h1>{{  $standartWert or 'Standartwert' }}</h1>
 
-</head>
+        @if($test == "Hallo")
+        <h1>hallo</h1>
+        @elseif($test == "Test")
+        <b>test</b>
+        @else
+        <strong>passt nicht!</strong>
+        @endif
+        <br>
+    <ul>
+        @foreach($testArray as $item)
+            <li>{{  $item['Datum']  }}</li>
+        @endforeach
+    </ul>
+    <ul>
+        @foreach($testArray as $item)
+            <li>{{  $item['Name']  }}</li>
+        @endforeach
+    </ul>
 
-<body>
-<h1>{{  $eingabe  }}</h1>
-
-
-</body>
+@include('misc.footer')

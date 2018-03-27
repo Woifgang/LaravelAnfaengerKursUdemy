@@ -24,6 +24,7 @@ Route::get('/formular' , function (){
 });
 
 Route::post('/data' , 'FormularController@formularAuswerten');
+Route::get('/data', 'DataAusgabeController@standartwert' );
 
 Auth::routes();
 
