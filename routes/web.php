@@ -25,6 +25,15 @@ Route::get('/formular', function (){
 Route::post('/validate', 'ValidateController@inputValidate');
 
 
+Route::get('/test', 'DatenController@daten');
+
+Route::get('/autoeintragen' , function (){
+    return view('carEintragen');
+});
+Route::post('/autoGespeichert', 'DatenController@datenFormular');
+Route::get('/autofinden' , 'Datencontroller@datenFinden');
+Route::get('/autoupdate' , 'Datencontroller@datenUpdate');
+
 
 /*
 //Grundfunktionen
