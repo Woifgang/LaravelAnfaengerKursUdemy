@@ -33,6 +33,11 @@ Route::get('/autoeintragen' , function (){
 Route::post('/autoGespeichert', 'DatenController@datenFormular');
 Route::get('/autofinden' , 'Datencontroller@datenFinden');
 Route::get('/autoupdate' , 'Datencontroller@datenUpdate');
+Route::get('/autowhere' , 'Datencontroller@datenWhere');
+Route::get('/autoall' , 'Datencontroller@datenAll');
+Route::get('/autolöschen' , 'Datencontroller@datenEntfernen');
+Route::get('/autozuweisen' , 'Datencontroller@datenVerknuepfen');
+
 
 
 /*

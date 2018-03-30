@@ -17,8 +17,8 @@ class CreateCarsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
-            $table->integer('baujahr')
-                ->default(0);
+            $table->integer('baujahr')->default(0);
+            $table->integer('garage_id')->default(0);
         });
     }
 
