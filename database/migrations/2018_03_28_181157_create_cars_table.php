@@ -18,7 +18,7 @@ class CreateCarsTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->integer('baujahr')->default(0);
-            $table->integer('garage_id')->default(0);
+            //$table->integer('garage_id')->default(0); //Wird benötigt bei Relationship One To One
         });
     }
 

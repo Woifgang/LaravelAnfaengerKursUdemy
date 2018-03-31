@@ -37,6 +37,9 @@ Route::get('/autowhere' , 'Datencontroller@datenWhere');
 Route::get('/autoall' , 'Datencontroller@datenAll');
 Route::get('/autolöschen' , 'Datencontroller@datenEntfernen');
 Route::get('/autozuweisen' , 'Datencontroller@datenVerknuepfen');
+Route::get('/automanytomany' , 'Datencontroller@datenManyToMany');
+Route::get('/autoinneuegarage' , 'Datencontroller@datenAutoNeueGarage');
+Route::get('/autogarageerste' , 'Datencontroller@datenErsteGarageZumAuto');
 
 
 

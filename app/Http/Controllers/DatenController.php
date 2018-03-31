@@ -77,7 +77,7 @@ class DatenController extends Controller
 
     }
 
-    //Car mit Garage verknüpfen
+    //Car mit Garage verknüpfen Relationship One to One
     public function datenVerknuepfen()
     {
         $garage = new Garage(['name' => 'Meine Garage']);
@@ -85,5 +85,47 @@ class DatenController extends Controller
 
         $car->garage()->save($garage);
         return "Auto wurde Garage zugewiesen";
+    }
+
+    //Relationship Many To Many
+    public function datenManyToMany()
+    {
+        $garage = new Garage(['name' => 'Meine Garage']);
+        $garage->save();
+
+        $car = new Car([
+            'name' => 'Mercedes',
+            'baujahr' => '2018'
+        ]);
+        $car->save();
+
+        $garage->cars()->save($garage);
+
+        return "Pivot Tabelle erzeugt";
+
+    }
+
+    public function datenAutoNeueGarage()
+    {
+
+        $car = Car::find(1);
+
+        $garage = new Garage(['name' => 'Zweite Garage']);
+        $garage->save();
+
+        $garage->cars()->save($car);
+
+        return "Pivot Tabelle erzeugt";
+
+    }
+
+    public function datenErsteGarageZumAuto()
+    {
+
+        $car = Car::find(1);
+        $garage = $car->garages()->first();
+
+        return $garage->name;
+
     }
 }

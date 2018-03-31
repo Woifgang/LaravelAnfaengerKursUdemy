@@ -17,7 +17,7 @@ class CreateGaragesTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
-            $table->integer('car_id')->default(0);
+            // $table->integer('car_id')->default(0); //Wird benötigt bei Relationship One To One
         });
     }
 
