@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class DatenController extends Controller
 {
+
     // Daten manuell eintragen
     public function daten()
     {

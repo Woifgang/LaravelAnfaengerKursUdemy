@@ -61,3 +61,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 */
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/geheim', 'UserController@userDatenAusgeben')->middleware('auth');
+Route::get('/email', 'UserController@emailVersenden')->middleware('auth');
+
+/*
+Route::get('/geheim', function (){
+   return "geheimer Inhalt";
+})->middleware('auth');
+*/
